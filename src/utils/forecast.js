@@ -11,7 +11,8 @@ const forecast = (longitude, latitude, callback) => {
             callback('Please check location', undefined);
         } else {
             callback(undefined, body.current.weather_descriptions[0] + '. It\'s currently ' + body.current.temperature +
-                ' degrees out. It\'s feels like ' + body.current.feelslike + ' degrees out.')
+                ' degrees out. It\'s feels like ' + body.current.feelslike + ' degrees out.'+ 'Humidity is '
+            + body.current.humidity + ' %.')
         }
     });
 };
